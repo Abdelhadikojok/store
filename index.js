@@ -1,8 +1,8 @@
 const express = require("express");
+const app = express();
+var cors = require("cors");
 const xlsx = require("xlsx");
 const fs = require("fs");
-const app = express();
-
 const PORT = process.env.PORT || 3030;
 
 app.use(cors());
@@ -29,6 +29,6 @@ app.get("/", (req, res) => {
   res.send("hello");
 });
 
-app.listen(PORT, () => {
-  console.log(`server started on port ${PORT}`);
+app.listen(3000, () => {
+  console.log("Server started on port 3000");
 });

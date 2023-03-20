@@ -1,0 +1,20 @@
+[
+  {
+    "Name": "ProductA",
+    "date": "12/01/2020",
+    "paid": true,
+    "quantity": "3"
+  },
+  {
+    "Name": "ProductB",
+    "date": "3/13/20",
+    "paid": true,
+    "quantity": "2"
+  },
+  {
+    "Name": "ProductC",
+    "date": "3/14/20",
+    "paid": false,
+    "quantity": "4"
+  }
+]
