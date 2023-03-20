@@ -26,9 +26,9 @@ let newData = data.map((ele) => {
 fs.writeFileSync("./datajson.json", JSON.stringify(newData, null, 2));
 
 app.get("/", (req, res) => {
-  res.send("hello");
+  res.send("./datajson.json");
 });
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log("Server started on port 3000");
 });
