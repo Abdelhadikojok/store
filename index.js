@@ -26,7 +26,7 @@ let newData = data.map((ele) => {
 fs.writeFileSync("./datajson.json", JSON.stringify(newData, null, 2));
 
 app.get("/", (req, res) => {
-  res.send("./datajson.json");
+  res.send(newData);
 });
 
 app.listen(PORT, () => {
