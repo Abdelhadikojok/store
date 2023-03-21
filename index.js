@@ -9,7 +9,7 @@ app.use(cors());
 
 const wb = xlsx.readFile("./data.xlsx", { dateNF: "mm/dd/yyyy" });
 
-const ws = wb.Sheets["products"];
+const ws = wb.Sheets["category"];
 
 const data = xlsx.utils.sheet_to_json(ws, { raw: false });
 
@@ -23,9 +23,7 @@ let newData = data.map((ele) => {
   return ele;
 });
 
-fs.writeFileSync("./datajson.json", JSON.stringify(newData, null, 2));
-
-app.get("/", (req, res) => {
+app.get("/with-us", (req, res) => {
   res.send(newData);
 });
 
